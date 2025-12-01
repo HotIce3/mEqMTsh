@@ -23,7 +23,7 @@ export function Hero() {
       {/* Background Image - Fixed with dynamic blur */}
       <div className="fixed inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1693159682660-c125e71844d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdvcmtzcGFjZSUyMGRlc2t8ZW58MXx8fHwxNzY0NTE1MzAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src=""
           alt="Hero background"
           className="w-full h-full object-cover"
           style={{ filter: `blur(${blurAmount}px)` }}
@@ -32,24 +32,45 @@ export function Hero() {
       </div>
 
       {/* Content - Fixed with dynamic blur and fade */}
-      <div 
+      <div
         className="fixed inset-0 z-10 flex items-center justify-center text-center px-6"
-        style={{ 
+        style={{
           filter: `blur(${blurAmount}px)`,
-          opacity: opacity
+          opacity: opacity,
         }}
       >
         <div>
           <div className="mb-8 inline-block">
-            <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
-              <span className="text-white text-5xl">P</span>
-            </div>
+            <svg
+              width="128"
+              height="128"
+              viewBox="0 0 96 96"
+              fill="none"
+              style={{
+                filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4))",
+              }}
+            >
+              <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#2563eb" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#9333ea" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+              <rect
+                x="8"
+                y="8"
+                width="80"
+                height="80"
+                rx="16"
+                fill="url(#grad)"
+              />
+              <circle cx="48" cy="48" r="30" fill="white" opacity="0.15" />
+            </svg>
           </div>
-          <h1 className="text-white mb-4">
-            Creative Portfolio
-          </h1>
+          <h1 className="text-white mb-4">Creative Portfolio</h1>
           <p className="text-white/90 max-w-2xl mx-auto">
-            Crafting beautiful digital experiences through innovative design and development
+            Crafting beautiful digital experiences through innovative design and
+            development
           </p>
         </div>
       </div>
