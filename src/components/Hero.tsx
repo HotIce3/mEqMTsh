@@ -23,7 +23,7 @@ export function Hero() {
       {/* Background Image - Fixed with dynamic blur */}
       <div className="fixed inset-0 z-0">
         <ImageWithFallback
-          src=""
+          src="/images/hero-bg.jpg"
           alt="Hero background"
           className="w-full h-full object-cover"
           style={{ filter: `blur(${blurAmount}px)` }}
